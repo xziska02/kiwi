@@ -1,12 +1,13 @@
 ext {
     versions = [
-            supportLib  : '1.0.2',
-            viewmodel   : '2.1.0',
-            kotlin      : '1.3.41',
-            recyclerview: '1.1.0-beta04',
-            cardview    : "1.0.0",
-            retrofit    : "2.6.0",
-            gson        : "2.8.5",
-            room        : "2.2.0-rc01"
+            supportLib                     : '1.0.2',
+            viewmodel                      : '2.1.0',
+            kotlin                         : '1.3.41',
+            recyclerview                   : '1.1.0-beta04',
+            cardview                       : "1.0.0",
+            retrofit                       : "2.6.0",
+            gson                           : "2.8.5",
+            room                           : "2.2.0-rc01",
+            okhttpLoggingInterceptorVersion: "3.9.0"
     ]
 }
