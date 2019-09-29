@@ -45,7 +45,6 @@ class FlightFragment : DaggerFragment() {
     }
 
     private fun loadData() {
-        preferences.updateFlag(true)
         viewModel.flights.observe(viewLifecycleOwner, Observer { response ->
             when (response?.status) {
                 Status.ERROR -> {
@@ -58,9 +57,9 @@ class FlightFragment : DaggerFragment() {
                     initViewPager()
                     loadingProgressBar.hide()
                     if (preferences.shouldUpdateFlights()) {
+                        preferences.updateFlag(false)
                         loadingProgressBar.show()
                         viewModel.refreshData()
-                        preferences.updateFlag(false)
                     }
                     response.data?.let { data -> flightAdapter.update(data) }
                 }
