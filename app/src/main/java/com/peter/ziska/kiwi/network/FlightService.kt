@@ -1,9 +1,9 @@
 package com.peter.ziska.kiwi.network
 
-import com.peter.ziska.kiwi.network.data.Flight
+import androidx.lifecycle.LiveData
+import com.peter.ziska.kiwi.network.data.FlightDto
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
@@ -12,14 +12,14 @@ import retrofit2.http.Query
 
 interface FlightService {
 
-    @GET("flights?partner=picky")
+    @GET("flights?partner=picky&flight_type=round")
     fun getFlight(
         @Query("fly_from") flyFrom: String,       //Example: CZ
-        @Query("date_from") dateFrom: String,
-        @Query("date_to") dateTo: String,
+        @Query("date_from", encoded = true) dateFrom: String,
+        @Query("date_to", encoded = true) dateTo: String,
         @Query("sort") sort: String = "price", //price duration quality date
         @Query("vehicle_type") vehicleType: String = "aircraft"
-    ): Call<Flight>
+    ): LiveData<ApiResponse<FlightDto>>
 
     companion object {
         private const val BASE_URL = "https://api.skypicker.com/"
@@ -35,7 +35,9 @@ interface FlightService {
 
             return Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
-                .client(client).baseUrl(BASE_URL)
+                .client(client)
+                .baseUrl(BASE_URL)
+                .addCallAdapterFactory(LiveDataCallAdapterFactory())
                 .build()
                 .create(FlightService::class.java)
         }

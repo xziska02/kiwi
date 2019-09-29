@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">KiwiFind</string>
+    <string name="book_now">Book for %1$d %2$s</string>
+    <string name="departure">Departure</string>
+    <string name="landing">Landing</string>
+    <string name="header_to_city_name">To %1$s</string>
+    <string name="direction_text">%1$s - %2$s</string>
 </resources>

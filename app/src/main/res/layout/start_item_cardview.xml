@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:translationZ="2dp"
+    app:cardCornerRadius="25dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/startCityToHeaderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/classic_margin_size_16dp"
+            android:layout_marginTop="@dimen/classic_margin_size_8dp"
+            android:text="@string/header_to_city_name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/header_date_text_size_24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/spaceHolder"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/classic_margin_size_8dp"
+            android:background="@color/colorLine"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/startCityToHeaderTextView" />
+
+        <TextView
+            android:id="@+id/startFromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/classic_margin_size_32dp"
+            android:layout_marginTop="@dimen/classic_margin_size_8dp"
+            android:text="DATE"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/main_bold_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/spaceHolder" />
+
+        <TextView
+            android:id="@+id/startToDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/classic_margin_size_8dp"
+            android:layout_marginEnd="@dimen/classic_margin_size_32dp"
+            android:text="DATE"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/main_bold_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/spaceHolder" />
+
+        <TextView
+            android:id="@+id/outboundTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/classic_margin_size_32dp"
+            android:text="Outbound"
+            android:textColor="@color/colorStartGreen"
+            android:textSize="@dimen/info_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startFromDate" />
+
+        <TextView
+            android:id="@+id/startCityFromName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/classic_margin_size_32dp"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:text="DAC"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/bold_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/outboundTextView" />
+
+        <TextView
+            android:id="@+id/startFromHolderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/classic_margin_size_32dp"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:text="@string/departure"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/info_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startCityFromName" />
+
+        <TextView
+            android:id="@+id/startFromTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/classic_margin_size_32dp"
+            android:text="09:00"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/bold_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startFromHolderText" />
+
+        <TextView
+            android:id="@+id/outboundTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/classic_margin_size_32dp"
+            android:text="Flight"
+            android:textColor="@color/colorStartGreen"
+            android:textSize="@dimen/info_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startFromDate" />
+
+        <TextView
+            android:id="@+id/startDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10h 5m"
+            android:textSize="@dimen/info_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/startFromTime"
+            app:layout_constraintEnd_toEndOf="@+id/startTimeTo"
+            app:layout_constraintStart_toStartOf="@+id/startFromTime"
+            app:layout_constraintTop_toTopOf="@id/startTimeTo" />
+
+        <TextView
+            android:id="@+id/startCityToName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:layout_marginEnd="@dimen/classic_margin_size_32dp"
+            android:text="DAC"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/bold_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/outboundTextView" />
+
+        <TextView
+            android:id="@+id/startToHolderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:layout_marginEnd="@dimen/classic_margin_size_32dp"
+            android:text="@string/landing"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/info_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startCityToName" />
+
+        <TextView
+            android:id="@+id/startTimeTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/classic_margin_size_32dp"
+            android:paddingBottom="@dimen/classic_margin_size_16dp"
+            android:text="10:00"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/bold_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startToHolderText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

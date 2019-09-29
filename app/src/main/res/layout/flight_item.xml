@@ -1,6 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/flightBannerImage"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/classic_margin_size_8dp"
+        android:layout_marginBottom="@dimen/classic_margin_size_8dp"
+        android:text="@string/direction_text"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/main_bold_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spaceHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Space
+        android:id="@+id/spaceHolder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_layout_in_picture"
+        app:layout_constraintBottom_toBottomOf="@id/flightBannerImage"
+        app:layout_constraintEnd_toEndOf="@id/flightBannerImage"
+        app:layout_constraintStart_toStartOf="@id/flightBannerImage" />
+
+    <Space
+        android:id="@+id/spaceHolder2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/classic_margin_size_32dp"
+        app:layout_constraintBottom_toBottomOf="@id/startBoxHolder"
+        app:layout_constraintEnd_toEndOf="@id/startBoxHolder"
+        app:layout_constraintStart_toStartOf="@id/startBoxHolder" />
+
+    <include
+        android:id="@+id/startBoxHolder"
+        layout="@layout/start_item_cardview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:translationZ="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spaceHolder" />
+
+    <Button
+        android:id="@+id/bookNowBtn"
+        style="@style/AppTheme.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/classic_margin_size_16dp"
+        android:text="@string/book_now"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,9 @@ ext {
             retrofit                       : "2.6.0",
             gson                           : "2.8.5",
             room                           : "2.2.0-rc01",
-            okhttpLoggingInterceptorVersion: "3.9.0"
+            okhttpLoggingInterceptorVersion: "3.9.0",
+            dagger                         : "2.21",
+            material                       : "1.0.0",
+            work_manager                   : "2.2.0"
     ]
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="classic_margin_size_8dp">8dp</dimen>
+    <dimen name="classic_margin_size_16dp">16dp</dimen>
+    <dimen name="classic_margin_size_24dp">24dp</dimen>
+    <dimen name="classic_margin_size_32dp">32dp</dimen>
+    <dimen name="classic_margin_size_40dp">40dp</dimen>
+    <dimen name="margin_layout_in_picture">56dp</dimen>
+    <dimen name="line_spacing">4dp</dimen>
+    <dimen name="pageMargin">20dp</dimen>
+    <dimen name="offset">30dp</dimen>
+
+    <dimen name="header_date_text_size_24sp">24sp</dimen>
+    <dimen name="header_date_text_size_32sp">32sp</dimen>
+    <dimen name="main_bold_text_size">19sp</dimen>
+    <dimen name="bold_text_size">17sp</dimen>
+    <dimen name="info_text_size">12sp</dimen>
+    <dimen name="button_text_size">14sp</dimen>
+</resources>
